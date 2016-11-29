@@ -5,7 +5,7 @@
                 <form class="calculator-form">
                     <div class="form-group row">
                         <div class="col-xs-12">
-                            <input type="number" class="form-control calculator-result" [(ngModel)]="result" readonly name="result"/>
+                            <input type="text" class="form-control calculator-result" [(ngModel)]="display" readonly name="display"/>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -24,13 +24,13 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-3">
-                            <button type="button" class="btn">7</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >7</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">8</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >8</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">9</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >9</button>
                         </div>
                         <div class="col-xs-3">
                             <button type="button" class="btn btn-info">&times;</button>
@@ -38,13 +38,13 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-3">
-                            <button type="button" class="btn">4</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >4</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">5</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >5</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">6</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >6</button>
                         </div>
                         <div class="col-xs-3">
                             <button type="button" class="btn btn-info">-</button>
@@ -52,13 +52,13 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-3">
-                            <button type="button" class="btn">1</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >1</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">2</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >2</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">3</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >3</button>
                         </div>
                         <div class="col-xs-3">
                             <button type="button" class="btn btn-info">+</button>
@@ -66,10 +66,10 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <button type="button" class="btn">0</button>
+                            <button type="button" class="btn" (click)="digitClicked($event)" >0</button>
                         </div>
                         <div class="col-xs-3">
-                            <button type="button" class="btn">.</button>
+                            <button type="button" class="btn" (click)="decimalClicked()" >.</button>
                         </div>
                         <div class="col-xs-3">
                             <button type="button" class="btn btn-success">=</button>
